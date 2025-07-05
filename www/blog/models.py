@@ -27,19 +27,19 @@ class Post(models.Model):
 class Comment(models.Model):
     author = models.CharField(max_length=35)
     text = models.TextField(max_length=750)
-
+    post = models.ForeignKey(to=Post, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.author}"
+        return f"Comment on {self.post.title} by {self.author}"
     
 
 
-class PostComment(models.Model):
-    post = models.ForeignKey(to=Post, on_delete=models.CASCADE)
-    comment = models.ForeignKey(to=Comment, on_delete=models.CASCADE)
+# class PostComment(models.Model):
+#     post = models.ForeignKey(to=Post, on_delete=models.CASCADE)
+#     comment = models.ForeignKey(to=Comment, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return f"Comment on {self.post.title} by {self.comment.author}"
+#     def __str__(self):
+#         return f"Comment on {self.post.title} by {self.comment.author}"
 
 
 
