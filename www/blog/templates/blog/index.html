@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
-</head>
-<body>
-    index
-    <a href="{%url 'blog:posts'%}">Post</a>
+{% extends 'blog/base.html'%}
+{%block content%}
+    Всем Привет, это мой сайт It-blog, тут вы можете писать свои статьи и читать другие, а так же оставлять комментарии.
+    <a href="{%url 'blog:posts'%}">ПОСТЫ</a>
     
-</body>
-</html>
+{%endblock%}

@@ -54,6 +54,5 @@ def logout(request):
     auth.logout(request)
 
 
-def profile(request):
-    form = UserProfileForm()
+
     

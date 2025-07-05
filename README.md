@@ -8,12 +8,10 @@
 Скриншоты сайта ниже
 
 index.html
-![image](images-site-for-github-README-not-use-on-site\index.png)
+![image](images-site-for-github-README-not-use-on-site/index.png)
 
 post.html
-![image](images-site-for-github-README-not-use-on-site\post.png)
+![image](images-site-for-github-README-not-use-on-site/post.png)
 
 login.html
-![image](images-site-for-github-README-not-use-on-site\login.png)
-
-<!-- ![image](files/Users/jzhang/Desktop/Isolated.png) -->
+![image](images-site-for-github-README-not-use-on-site/login.png)
