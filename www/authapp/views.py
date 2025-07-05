@@ -3,6 +3,9 @@ from django.urls import reverse
 from django.views import View
 from .forms import UserLoginForm,UserRegForm,UserProfileForm
 from django.contrib import auth
+from blog.models import Post,PostCategory
+from django.contrib.auth.decorators import login_required
+from .forms import ArticleForm
 # Create your views here.
 
 class Reg(View):
@@ -53,6 +56,28 @@ class Login(View):
 def logout(request):
     auth.logout(request)
 
+@login_required
+def profile_view(request):
+    if request.method == 'POST':
+        form = ArticleForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            #post.author = request.user # в вашей модели нет author, убрано
+            post.save()
+            return redirect('blog:index')
+        else:
+            print("________________ERROR!!!______________________|||")
+    else:
+        form = ArticleForm()
+
+    posts = Post.objects.all().order_by('-id') #Переименовано articles -> posts
+    categories = PostCategory.objects.all() #Переименовано Category -> PostCategory
+    context = {
+        'form': form,
+        'articles': posts, # articles -> posts
+        'categories': categories,
+    }
+    return render(request, 'auth/profile.html', context)
 
 
     

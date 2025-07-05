@@ -18,4 +18,6 @@ login.html
 
 detail_post.html
 ![image](images-site-for-github-README-not-use-on-site/comment.png)
+
 так же на detail_post отображаеться полная статья
+

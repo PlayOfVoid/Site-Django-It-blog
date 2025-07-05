@@ -1,0 +1,162 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Создание статьи{% endblock %}
+
+{% block content %}
+    <style>
+        /* Общие стили */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Стили для формы */
+        .article-form {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .article-form h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .article-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .article-form input[type="text"],
+        .article-form textarea,
+        .article-form select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+            font-family: Arial, sans-serif; /* Наследуем шрифт */
+        }
+
+        .article-form textarea {
+            resize: vertical; /* Разрешаем изменение высоты */
+            height: 150px;
+        }
+
+        .article-form input[type="submit"] {
+            background-color: #5cb85c; /* Зеленый цвет */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .article-form input[type="submit"]:hover {
+            background-color: #449d44; /* Более темный зеленый цвет */
+        }
+
+        /* Стили для отображения имени пользователя */
+        .username-display {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #777;
+        }
+
+        .username-display strong {
+            color: #333;
+        }
+
+        /* Стили для списка статей */
+        .article-list {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-list h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .article {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .article h3 {
+            color: #337ab7;
+            margin-bottom: 5px;
+        }
+
+        .article p {
+            color: #555;
+        }
+
+        .article .category {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+
+    <div class="container">
+        <div class="username-display">
+            Вы вошли как: <strong>{{ user.username }}</strong>
+        </div>
+
+        <div class="article-form">
+            <h1>Создание статьи</h1>
+       <form method="post">
+    {% csrf_token %}
+    <label for="title">Заголовок:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="dsc">Краткое описание:</label>
+    <input type="text" id="dsc" name="dsc" required>
+
+    <label for="category">Категория:</label>
+    <select id="category" name="category" required>
+        {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.title }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="text">Текст статьи:</label>
+    <textarea id="text" name="text" required></textarea>
+
+    <input type="submit" value="Опубликовать">
+    </form>
+        </div>
+
+        <div class="article-list">
+            <h2>Последние статьи</h2>
+            {% for article in articles %}
+                <div class="article">
+                    <h3>{{ article.title }}</h3>
+                    <p>{{ article.dsc }}</p>
+                    <p>{{ article.text|truncatechars:200 }}</p>
+                    <p class="category">Категория: {{ article.category.title }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
