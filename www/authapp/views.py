@@ -53,8 +53,10 @@ class Login(View):
         }
         return render(request, 'auth/login.html', context)
     
-def logout(request):
+def logout_view(request):
     auth.logout(request)
+    return redirect('blog:index')
+
 
 @login_required
 def profile_view(request):

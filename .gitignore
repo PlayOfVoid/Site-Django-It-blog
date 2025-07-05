@@ -1,5 +1,6 @@
 .env
 .idea
-__pycahe__
+.venv
+**/__pycache__
 htlp.txt
 db.sqlite3
