@@ -7,6 +7,13 @@
 
 Скриншоты сайта ниже
 
-![image](C:\Users\User\Pictures\Screenshots\Снимок экрана 2025-07-05 103757.png)
+index.html
+![image](images-site-for-github-README-not-use-on-site\index.png)
+
+post.html
+![image](images-site-for-github-README-not-use-on-site\post.png)
+
+login.html
+![image](images-site-for-github-README-not-use-on-site\login.png)
 
 <!-- ![image](files/Users/jzhang/Desktop/Isolated.png) -->
