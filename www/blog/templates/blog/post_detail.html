@@ -1,12 +1,119 @@
-{%extends 'blog/base.html'%}
+{% extends 'blog/base.html' %}
 
-{%block content%}
+{% block content %}
+    <style>
+        /* Стили для формы комментария */
+        .comment-form {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .comment-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .comment-form input[type="text"],
+        .comment-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Чтобы padding не увеличивал ширину */
+            font-family: Arial, sans-serif; /* Наследуем шрифт */
+        }
+
+        .comment-form textarea {
+            resize: vertical; /* Разрешаем изменение высоты */
+            height: 100px;
+        }
+
+        .comment-form input[type="submit"] {
+            background-color: #4CAF50; /* Зеленый цвет кнопки */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .comment-form input[type="submit"]:hover {
+            background-color: #367c39; /* Более темный зеленый цвет при наведении */
+        }
+
+        /* Стили для отображения комментариев (если нужно) */
+        .comments {
+            margin-top: 30px;
+        }
+
+        .comment {
+            border: 1px solid #eee;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment-text {
+            margin-bottom: 0;
+        }
+
+        h1 {
+        font-size: 2.5em; /* Increase heading size */
+        color: #333; /* Set heading color */
+        margin-bottom: 0.5em; /* Add margin below heading */
+        }
+
+        p {
+        font-size: 1.1em; /* Increase paragraph size */
+        line-height: 1.6; /* Improve line height for readability */
+        color: #555; /* Set paragraph color */
+        }
+    </style>
+
     Название:
-    <h1>{{post.title}}</h1>
+    <h1>{{ post.title }}</h1>
 
     Описание:
-    <p>{{post.dsc}}</p>
+    <p>{{ post.dsc }}</p>
     Пост:
-    <p>{{post.text}}</p>
-    
-{%endblock%}
+    <p>{{ post.text }}</p>
+
+    <div class="comment-form">
+        <h2>Оставить комментарий</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="author">Автор:</label>
+            <input type="text" id="author" name="author" required>
+
+            <label for="text">Текст комментария:</label>
+            <textarea id="text" name="text" required></textarea>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+
+    {% if comments %}
+        <div class="comments">
+            <h2>Комментарии:</h2>
+            {% for comment in comments %}
+                <div class="comment">
+                    <div class="comment-author">{{ comment.author }}</div>
+                    <p class="comment-text">{{ comment.text }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+{% endblock %}
