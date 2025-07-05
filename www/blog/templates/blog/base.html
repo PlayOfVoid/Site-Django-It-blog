@@ -86,12 +86,22 @@
     <header>
         <nav>
             <ul>
-                <li><a href="{%url 'blog:index'%}">Главная</a></li>
-                <li><a href="{%url 'blog:posts'%}">Посты</a></li>
-                <li><a href="{% url 'auth:login'%}">Войти</a></li>
-                <li><a href="{% url 'auth:logout'%}">Выйти</a></li>
-                <li><a href="{%url 'auth:profile'%}">Профиль</a></li>
-                <li><a href="{%url 'admin:index'%}">Админ-Панель</a></li>
+                <li><a href="{% url 'blog:index' %}">Главная</a></li>
+                <li><a href="{% url 'blog:posts' %}">Посты</a></li>
+
+                {% if not user.is_authenticated %}
+                    <li><a href="{% url 'auth:login' %}">Войти</a></li>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'auth:logout' %}">Выйти</a></li>
+                {% endif %}
+
+                <li><a href="{% if user.is_authenticated%} {% url 'auth:profile' %} {%else%} {%url 'auth:login'%} {%endif%}">Профиль</a></li>
+
+                {% if user.is_staff or user.is_superuser %}
+                    <li><a href="{% url 'admin:index' %}">Админ-Панель</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
