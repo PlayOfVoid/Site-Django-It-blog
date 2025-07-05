@@ -7,6 +7,6 @@
 
 Скриншоты сайта ниже
 
-![image]()
+![image](C:\Users\User\Pictures\Screenshots\Снимок экрана 2025-07-05 103757.png)
 
 <!-- ![image](files/Users/jzhang/Desktop/Isolated.png) -->

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мой сайт{% endblock %}</title>
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Светло-серый фон */
+            color: #333; /* Темно-серый текст */
+            line-height: 1.6;
+        }
+
+        /* Стили для шапки */
+        header {
+            background-color: #333; /* Темно-серый фон шапки */
+            color: #fff; /* Белый текст в шапке */
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex; /* Расположение элементов в строку */
+            justify-content: center; /* Выравнивание по центру */
+        }
+
+        nav li {
+            margin: 0 1rem; /* Отступы между элементами */
+        }
+
+        nav a {
+            color: #fff; /* Белый цвет ссылок */
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease; /* Плавное изменение цвета фона */
+        }
+
+        nav a:hover {
+            background-color: #555; /* Более темный серый цвет при наведении */
+        }
+
+        /* Стили для основного контента */
+        main {
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 800px; /* Ограничение ширины контента */
+            background-color: #fff; /* Белый фон основного контента */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень */
+        }
+
+        /* Стили для подвала */
+        footer {
+            background-color: #333; /* Темно-серый фон подвала */
+            color: #fff; /* Белый текст в подвале */
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed; /* Фиксированный подвал внизу экрана */
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Дополнительные стили (необязательные) */
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        /* Стили для активной ссылки (если нужно) */
+        nav a.active {
+            background-color: #777;
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/about">О нас</a></li>
+                <li><a href="/services">Услуги</a></li>
+                <li><a href="/portfolio">Портфолио</a></li>
+                <li><a href="/blog">Блог</a></li>
+                <li><a href="/contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Мой сайт. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
