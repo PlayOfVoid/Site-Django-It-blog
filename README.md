@@ -29,24 +29,28 @@
 
 ### Главная страница (index.html)
 
-[Скриншот index.html]
+[!image](images-site-for-github-README-not-use-on-site/index.html)
 
 ### Страница публикации (post.html)
 
-[Скриншот post.html]
+[!image](images-site-for-github-README-not-use-on-site/post.html)
 
 ### Страница авторизации (login.html)
 
-[Скриншот login.html]
+[!image](images-site-for-github-README-not-use-on-site/login.html)
 
 ### Страница просмотра статьи (detail_post.html)
 
-[Скриншот detail_post.html]
+[!image](images-site-for-github-README-not-use-on-site/detail_post.html)
 
-## Лицензия
-
-[Укажите тип лицензии, например, MIT]
 
 ## Авторы
 
-[Укажите имя автора/авторов и ссылки на GitHub-профили]
+[PlayOfVoid]
+`       __                           ___   ___                        ___     ___   ___                                
+  .'|=|  |    .'|        .'|=|`.   |   | |   |      .'|=|`.     .'|=|_.'    |   | |   |   .'|=|`.     .'|   .'|=|`.   
+.'  | |  |  .'  |      .'  | |  `. `.  |_|  .'    .'  | |  `. .'  |  ___    |   | |   | .'  | |  `. .'  | .'  | |  `. 
+|   |=|.'   |   |      |   |=|   |   `.   .'      |   | |   | |   |=|_.'    |   | |   | |   | |   | |   | |   | |   | 
+|   |       |   |  ___ |   | |   |    |   |       `.  | |  .' |   |         `.  | |  .' `.  | |  .' |   | |   | |  .' 
+|___|       |___|=|_.' |___| |___|    |___|         `.|=|.'   |___|           `.|=|.'     `.|=|.'   |___| |___|=|.'   
+                                                                                                                      `
