@@ -29,19 +29,19 @@
 
 ### Главная страница (index.html)
 
-![image](images-site-for-github-README-not-use-on-site/index.html.png)
+![image](images-site-for-github-README-not-use-on-site/index.png)
 
 ### Страница публикации (post.html)
 
-![image](images-site-for-github-README-not-use-on-site/post.html.png)
+![image](images-site-for-github-README-not-use-on-site/post.png)
 
 ### Страница авторизации (login.html)
 
-![image](images-site-for-github-README-not-use-on-site/login.html.png)
+![image](images-site-for-github-README-not-use-on-site/login.png)
 
 ### Страница просмотра статьи (detail_post.html)
 
-![image](images-site-for-github-README-not-use-on-site/detail_post.html.png)
+![image](images-site-for-github-README-not-use-on-site/detail_post.png)
 
 ## Автор
 ```
