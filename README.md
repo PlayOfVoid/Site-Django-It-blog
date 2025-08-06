@@ -41,7 +41,7 @@
 
 ### Страница просмотра статьи (detail_post.html)
 
-![image](images-site-for-github-README-not-use-on-site/detail_post.png)
+![image](images-site-for-github-README-not-use-on-site/post_detail.png)
 
 ## Автор
 ```
