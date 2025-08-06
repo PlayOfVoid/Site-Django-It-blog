@@ -44,9 +44,7 @@
 [!image](images-site-for-github-README-not-use-on-site/detail_post.html)
 
 
-## Авторы
-
-[PlayOfVoid]
+## Автор
 ```
        __                           ___   ___                        ___     ___   ___                                
   .'|=|  |    .'|        .'|=|`.   |   | |   |      .'|=|`.     .'|=|_.'    |   | |   |   .'|=|`.     .'|   .'|=|`.   
