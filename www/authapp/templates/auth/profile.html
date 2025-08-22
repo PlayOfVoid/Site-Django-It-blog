@@ -139,6 +139,11 @@
             <option value="{{ category.id }}">{{ category.title }}</option>
         {% endfor %}
     </select>
+           <select id="category1" name="category" required>
+               {% for tag in tags%}
+                  <option value="{{ tag.id }}">{{ tag.name }}</option>
+               {%endfor%}
+           </select>
 
     <label for="text">Текст статьи:</label>
     <textarea id="text" name="text" required></textarea>
