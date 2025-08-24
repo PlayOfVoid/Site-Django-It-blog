@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.models import User
+from .models import User
 from blog.models import Post
 from django.contrib.auth.forms import UserCreationForm,AuthenticationForm,UserChangeForm
 
@@ -25,7 +25,7 @@ class UserProfileForm(UserChangeForm):
 class ArticleForm(forms.ModelForm):#форма для создания статьи
     class Meta:
         model = Post
-        fields = ['title', 'dsc', 'text', 'category'] # Добавлено dsc
+        fields = ['title', 'description', 'content', 'category'] # Добавлено dsc
 
 
     
