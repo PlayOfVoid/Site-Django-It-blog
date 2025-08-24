@@ -1,0 +1,133 @@
+[33mcommit c61a47d240a2ce743f51eded29c38a10c0f8913e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;33mtag: [m[1;33m1.2[m[33m, [m[1;33mtag: [m[1;33m1.1[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 15:05:30 2025 +0300
+
+    edit models Comment
+    
+    была выявлена не нужная связь ManyToMany, мы от нее избавились
+
+[33mcommit c0ed583d67ddc3f1b441e381153ab2fa7e2be5c4[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 14:30:08 2025 +0300
+
+    delete __pycache__
+
+[33mcommit eedb93dd45fc32be6237878a9052a99723849617[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 13:58:03 2025 +0300
+
+    delete help.txt from github
+
+[33mcommit 6ec15dc8b2c55fe26981e6a442128080da5f4dde[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 13:56:00 2025 +0300
+
+    delete .idea
+
+[33mcommit 1e853470434309d6a0097cb462deb3d64dc89efe[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 13:53:32 2025 +0300
+
+    теперь пользователи из профиля могут писать свои статьи
+
+[33mcommit 6d90662c04740e968bb9c65f706b0efa883a6f81[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 11:22:02 2025 +0300
+
+    Обновленны фото и README.md файл
+
+[33mcommit fbfb54fec053c3951fbe908130ae7797e8ccffcf[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 11:18:49 2025 +0300
+
+    delete database from github
+
+[33mcommit 756b1244179176c975a06f2519be8a9b2b22cc3c[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 11:13:36 2025 +0300
+
+    Добавленно добавление комемнтариев под посты
+
+[33mcommit 6897e3a9f5e15cff2fb42f064dc97ffb01f9fb46[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 10:49:28 2025 +0300
+
+    edit README.md. add image. fix error.
+
+[33mcommit c101503113239aebc66ad1c0afb8ab9fae1a2d82[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 10:47:24 2025 +0300
+
+    add images_dir and edit README.md
+
+[33mcommit 077bc70a238d8c2a3caec86785f51723f8f4971d[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 10:41:46 2025 +0300
+
+    add base.html
+
+[33mcommit b7db1b8036120b71e9a8bbb9bf39ff10e0196d97[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 10:39:45 2025 +0300
+
+    edit README.md
+
+[33mcommit fa7bf80c6dd3e2a5cbc770322f5b44a5f1c232ea[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 09:29:07 2025 +0300
+
+    edit README.md
+
+[33mcommit b0e1854bbe1e4ed0a9852a04f45191d2b68a6646[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 09:22:48 2025 +0300
+
+    add README.md
+
+[33mcommit b344dcf65c38f2b5c7ce28b17baad869a5bb31c1[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 09:21:11 2025 +0300
+
+    add req.txt
+
+[33mcommit 9d92401b956560334a99003159285c239e6b165f[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 09:18:21 2025 +0300
+
+    edit error3
+
+[33mcommit 5e74da6cc069d6b45f7d98c0e81e0ac85616d3bd[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 09:17:44 2025 +0300
+
+    edit error2
+
+[33mcommit 8d06e7c1a05ddc591fb6f2ea25348b28c7222705[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 09:16:34 2025 +0300
+
+    edit error
+
+[33mcommit 87340fe169b41a9a5ba94a27b88bf0d398c21288[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 09:01:13 2025 +0300
+
+    delete __pycahe__2
+
+[33mcommit 36f09a2586bbc684087861092b053c8ea12c8cd6[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 08:58:05 2025 +0300
+
+    delete __pycahe__
+
+[33mcommit 5051b355187fd1533f09901c90a5a999f1ab8de2[m
+Author: warriorOfEmptiness <phDiscordAndreyka@yandex.ru>
+Date:   Sat Jul 5 08:55:57 2025 +0300
+
+    delete .idea from commit
+
+[33mcommit 58636f3e125880695a1bc586291ff94d60086b8e[m
+Author: murderousGeniusXDD <mesheryakovch@yandex.ru>
+Date:   Sat Jul 5 08:37:16 2025 +0300
+
+    first commit

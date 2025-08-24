@@ -139,9 +139,15 @@
             <option value="{{ category.id }}">{{ category.title }}</option>
         {% endfor %}
     </select>
+    <label for="category">Тег:</label>
+    <select id="category" name="category" required>
+        {% for tag in tags %}
+            <option value="{{ tag.id }}">{{ tag.title }}</option>
+        {% endfor %}
+    <!--  -->
 
-    <label for="text">Текст статьи:</label>
-    <textarea id="text" name="text" required></textarea>
+    <label for="context">Текст статьи:</label>
+    <input type="" id="context" name="context" required></input>
 
     <input type="submit" value="Опубликовать">
     </form>

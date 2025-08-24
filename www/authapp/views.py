@@ -6,6 +6,7 @@ from django.contrib import auth
 from blog.models import Post,PostCategory
 from django.contrib.auth.decorators import login_required
 from .forms import ArticleForm
+from blog.models import  Tag
 # Create your views here.
 
 class Reg(View):
@@ -74,10 +75,12 @@ def profile_view(request):
 
     posts = Post.objects.all().order_by('-id') #Переименовано articles -> posts
     categories = PostCategory.objects.all() #Переименовано Category -> PostCategory
+    tags = Tag.objects.all()
     context = {
         'form': form,
         'articles': posts, # articles -> posts
         'categories': categories,
+        'tags':tags,
     }
     return render(request, 'auth/profile.html', context)
 
