@@ -82,14 +82,19 @@
         }
     </style>
     <br>Автор: {{post.author}}</br>
+    <br><a href="{% url 'auth:is_sub' post.author_id %}">
+        {%if post.author.}
+        Подписаться
+      
+</a></br>
 
     Название:
     <h1>{{ post.title }}</h1>
 
     Описание:
-    <p>{{ post.dsc }}</p>
+    <p>{{ post.description}}</p>
     Пост:
-    <p>{{ post.text }}</p>
+    <p>{{ post.content }}</p>
 
     <div class="comment-form">
         <h2>Оставить комментарий</h2>

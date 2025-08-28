@@ -127,11 +127,11 @@
             <h1>Создание статьи</h1>
        <form method="post">
     {% csrf_token %}
-    <label for="title">Заголовок:</label>
-    <input type="text" id="title" name="title" required>
+    <label for="{{form.title.id_for_label}}">Заголовок:</label>
+    {{form.title}}
 
-    <label for="dsc">Краткое описание:</label>
-    <input type="text" id="dsc" name="dsc" required>
+    <label for="{{form.description.id_for_label}}">Краткое описание:</label>
+    {{form.description}}
 
     <label for="category">Категория:</label>
     <select id="category" name="category" required>
@@ -145,9 +145,11 @@
             <option value="{{ tag.id }}">{{ tag.title }}</option>
         {% endfor %}
     <!--  -->
+    </select>
 
-    <label for="context">Текст статьи:</label>
-    <input type="" id="context" name="context" required></input>
+    <label for="{{form.content.id_for_label}}">Текст статьи:</label>
+    {{form.content}}
+
 
     <input type="submit" value="Опубликовать">
     </form>

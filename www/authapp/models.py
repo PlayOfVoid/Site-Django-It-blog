@@ -12,6 +12,7 @@ class Subscribe(models.Model):
     author = models.ForeignKey(to=User,on_delete=models.CASCADE,related_name="authors")
     subscriber = models.ForeignKey(to=User,on_delete=models.CASCADE,related_name="subscribers")
     mute = models.BooleanField(default=False)
+    is_subscribe = models.BooleanField(default=False)
 
 
     def __str__(self):

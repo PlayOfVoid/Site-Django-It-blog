@@ -65,11 +65,11 @@ def profile_view(request):
         form = ArticleForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
-            #post.author = request.user # в вашей модели нет author, убрано
+            post.author = request.user 
             post.save()
             return redirect('blog:index')
         else:
-            print("________________ERROR!!!______________________|||")
+            print(form.errors)
     else:
         form = ArticleForm()
 

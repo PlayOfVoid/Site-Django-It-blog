@@ -1,7 +1,9 @@
-from django.shortcuts import render,get_object_or_404,redirect
+from django.shortcuts import render,get_object_or_404,redirect,HttpResponse
 from .models import Post,PostCategory,Comment
 from .forms import CommentForm
-
+from authapp.models import Subscribe
+from authapp.models import User
+from . import myfunc
 # Create your views here.
 
 def index(request):
@@ -40,3 +42,28 @@ def detail_post(request, pk):
         'form': form,
     }
     return render(request, 'blog/post_detail.html', context)
+
+
+
+
+def subscribe(request, author_id):
+    author = get_object_or_404(User, pk=author_id)
+    subscriber = request.user
+    if author == subscriber:
+        return HttpResponse('Вы не можете подписаться сами на себя!')
+
+    subscribe, created = Subscribe.objects.get_or_create(
+        author=author,
+        subscriber=subscriber,
+        defaults={'mute': False, 'is_subscribe': False}
+    )
+
+    # Переключение статуса подписки
+    subscribe.is_subscribe = not subscribe.is_subscribe
+    subscribe.save()
+    
+   
+
+    return redirect(request.META.get('HTTP_REFERER', '/'))
+
+
